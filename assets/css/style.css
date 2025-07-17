@@ -1,0 +1,183 @@
+/* ----- Variables ----- */
+:root {
+  /* colors */
+  --white: #fff; /* button's text */
+  --periwinkle: #d2e1fecc; /* cards' background */
+  --gold: #bf9525; /* headre & footer' text */
+  --dark_red: #77191b; /* default button */
+  --light_red: #ac2426; /* hover button */
+  --night: #0c0b14; /* header & footer's banner + cards' title */
+  --dark_navy: #050c3f; /* cards' text */
+  --navy: #111a60; /* cards' image */
+  --shadow: #00000040;
+
+  /* font */
+  --main_title: "Quintessential", serif;
+  --card_title: "Akatab", sans-serif;
+  --card_title_weight: 500;
+  --text: "Actor", sans-serif;
+  --uppercase: uppercase;
+
+  /* font sizes */
+  --size40: 40px;
+  --size24: 24px;
+  --size22: 22px;
+  --size20: 20px;
+  --size18: 18px;
+  --size16: 16px;
+  --size14: 14px;
+}
+
+/* ----- Reset ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----- General ----- */
+body {
+  background: url("../images/stars.png") no-repeat center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.text {
+  font-family: var(--text);
+  font-size: var(--size16);
+}
+
+.gold {
+  color: var(--gold);
+}
+
+.banner_header_footer {
+  position: fixed;
+  width: 100%;
+  background-color: var(--night);
+  height: 56px;
+  padding: 7px 14px;
+}
+
+.home_link,
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shadow {
+  box-shadow: 4px 4px 10px var(--shadow);
+}
+
+.hidden {
+  display: none;
+}
+
+.uppercase {
+  text-transform: var(--uppercase);
+}
+
+/* ----- Header ----- */
+.header {
+  top: 0;
+  z-index: 1000;
+}
+
+.home_link {
+  text-decoration: none;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.main_title {
+  font-family: var(--main_title);
+  font-size: var(--size22);
+}
+
+/* ----- Main ----- */
+.main {
+  width: 100%;
+  padding: 86px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main_title:hover {
+  text-shadow: 2px 2px 10px #ee8464cc;
+}
+
+.main_title:active {
+  color: #ee8464;
+  text-shadow: 2px 2px 10px ​#ffd700cc;
+}
+
+/* Button */
+.draw_button {
+  background-color: var(--dark_red);
+  color: white;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+.draw_button:hover {
+  background-color: var(--light_red);
+  transition: background 1s;
+}
+
+.draw_button:active {
+  box-shadow: inset 4px 4px 10px var(--shadow);
+}
+
+/* Loader */
+.loader_animated {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loader_animated::after {
+  content: "";
+  width: 150px;
+  height: 100%;
+  background: var(--light_red);
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  animation: linear-loader 3s linear infinite;
+}
+
+@keyframes linear-loader {
+  0% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+}
+
+/* ----- Footer ----- */
+.footer {
+  bottom: 0;
+  z-index: 900;
+  text-align: center;
+}
+
+.copyright_line {
+  font-size: var(--size16);
+}

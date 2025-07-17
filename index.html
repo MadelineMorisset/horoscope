@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Découvrez l'oracle du jour pour chaque signe astrologique. Un tirage intuitif et inspirant pour vous accompagner avec sagesse et poésie. Horoscope unique et personnalisé, chaque jour."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Actor&family=Akatab:wght@400;500;600;700;800;900&family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
+    <title>Horoscope Oracle du Jour</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <header class="header banner_header_footer shadow">
+      <a href="index.html" class="home_link">
+        <img src="assets/images/logo.png" alt="Logo" class="logo" />
+        <h1 class="main_title gold">Horoscope – Oracle du jour</h1>
+      </a>
+    </header>
+
+    <main class="main">
+      <section class="draw">
+        <button id="drawButton" class="draw_button shadow">
+          🏹 Tirer les 12 messages
+        </button>
+        <span id="loader" class="loader_animated hidden"></span>
+      </section>
+
+      <section id="oracleCards" class="cards_container">
+        <!-- Cartes d'oracle injectées ici avec JS -->
+      </section>
+
+      <section id="errorContaine" class="error hidden"></section>
+    </main>
+
+    <footer class="footer banner_header_footer">
+      <p class="copyright_line text gold uppercase">
+        © 2025 Horoscope – Madeline Ricateau. Tous droits réservés.
+      </p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
