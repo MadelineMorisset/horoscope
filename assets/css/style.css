@@ -14,18 +14,14 @@
   /* font */
   --main_title: "Quintessential", serif;
   --card_title: "Akatab", sans-serif;
-  --card_title_weight: 500;
+  --card_title_weight: 700;
   --text: "Actor", sans-serif;
   --uppercase: uppercase;
 
   /* font sizes */
-  --size40: 40px;
   --size24: 24px;
   --size22: 22px;
-  --size20: 20px;
-  --size18: 18px;
   --size16: 16px;
-  --size14: 14px;
 }
 
 /* ----- Reset ----- */
@@ -70,6 +66,10 @@ body {
   box-shadow: 4px 4px 10px var(--shadow);
 }
 
+.text_shadow {
+  text-shadow: 4px 4px 10px var(--shadow);
+}
+
 .hidden {
   display: none;
 }
@@ -104,8 +104,10 @@ body {
   width: 100%;
   padding: 86px 20px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 30px;
+  align-items: center;
 }
 
 .main_title:hover {
@@ -118,6 +120,12 @@ body {
 }
 
 /* Button */
+.draw {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
 .draw_button {
   background-color: var(--dark_red);
   color: white;
@@ -171,6 +179,64 @@ body {
   }
 }
 
+/* Cartes */
+.cards_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 30px;
+  width: 100%;
+  padding: 0 10%;
+}
+
+.card {
+  background-color: var(--periwinkle);
+  border-radius: 15px;
+  padding: 25px 30px;
+  margin: 10px;
+  width: 100%;
+  box-shadow: 4px 4px 10px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+.card_title {
+  font-family: var(--card_title);
+  font-weight: var(--card_title_weight);
+  font-size: var(--size24);
+  text-transform: var(--uppercase);
+  color: var(--night);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card_image_container {
+  width: 75px;
+  height: 75px;
+  background-color: var(--navy);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 100%;
+}
+
+.card_image {
+  width: 100%;
+  object-fit: fill;
+}
+
+.card_p {
+  font-family: var(--text);
+  font-size: var(--size16);
+  color: var(--dark_navy);
+  text-align: center;
+}
+
 /* ----- Footer ----- */
 .footer {
   bottom: 0;
@@ -180,4 +246,11 @@ body {
 
 .copyright_line {
   font-size: var(--size16);
+}
+
+/* Responsive */
+@media (min-width: 760px) {
+  .cards_container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
