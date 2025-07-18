@@ -34,8 +34,8 @@
 
 /* ----- General ----- */
 body {
-  background: url("../images/stars.png") no-repeat center fixed;
-  background-size: cover;
+  background: url("../images/stars.png") center center fixed;
+  background-size: auto;
   position: relative;
 }
 
@@ -265,6 +265,10 @@ body {
 
 /* Responsive */
 @media (min-width: 760px) {
+  body {
+    background: url("../images/stars.png") no-repeat center center fixed;
+    background-size: cover;
+  }
   .cards_container {
     grid-template-columns: 1fr 1fr;
   }
