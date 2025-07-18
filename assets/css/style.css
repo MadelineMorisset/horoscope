@@ -2,7 +2,8 @@
 :root {
   /* colors */
   --white: #fff; /* button's text */
-  --periwinkle: #d2e1fecc; /* cards' background */
+  --periwinkle: #d2e1fef2; /* cards' background */
+  --periwinkle_partial: #d2e1fecc; /* cards' background */
   --gold: #bf9525; /* headre & footer' text */
   --dark_red: #77191b; /* default button */
   --light_red: #ac2426; /* hover button */
@@ -190,7 +191,7 @@ body {
 }
 
 .card {
-  background-color: var(--periwinkle);
+  background-color: var(--periwinkle_partial);
   border-radius: 15px;
   padding: 25px 30px;
   margin: 10px;
@@ -201,6 +202,10 @@ body {
   justify-content: start;
   align-items: center;
   gap: 20px;
+}
+
+.card:hover {
+  background-color: var(--periwinkle);
 }
 
 .card_title {
@@ -235,6 +240,14 @@ body {
   font-size: var(--size16);
   color: var(--dark_navy);
   text-align: center;
+}
+
+/* Error */
+.error {
+  padding: 10px;
+  background-color: var(--dark_red);
+  color: var(--white);
+  border-radius: 10px 20px;
 }
 
 /* ----- Footer ----- */
