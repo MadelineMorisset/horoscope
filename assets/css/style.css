@@ -34,8 +34,8 @@
 
 /* ----- General ----- */
 body {
-  background: url("../images/stars.png") no-repeat center fixed;
-  background-size: cover;
+  background: url("../images/stars.png") center center fixed;
+  background-size: auto;
   position: relative;
 }
 
@@ -81,7 +81,6 @@ body {
 
 /* ----- Header ----- */
 .header {
-  position: fixed;
   top: 0;
   z-index: 1000;
 }
@@ -253,7 +252,6 @@ body {
 
 /* ----- Footer ----- */
 .footer {
-  position: fixed;
   bottom: 0;
   z-index: 900;
   text-align: center;
@@ -265,6 +263,10 @@ body {
 
 /* Responsive */
 @media (min-width: 760px) {
+  body {
+    background: url("../images/stars.png") no-repeat center center fixed;
+    background-size: cover;
+  }
   .cards_container {
     grid-template-columns: 1fr 1fr;
   }
